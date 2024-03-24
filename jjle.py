@@ -12,7 +12,7 @@ wordle_style = Style.from_dict({
 })
 list_={}
 wordict={}
-m=900000
+m=600000
 with open("wordlist.txt","r") as reader:
     while m!=0:
         try:
@@ -72,7 +72,7 @@ while turnleft!=0:
         if same_word_map[ord(word_user_guess[x])-ord("a")] >0:
             state[x]=1
             same_word_map[ord(word_user_guess[x]) - ord("a")]-=1
-    printstring="Information about relation between your guessed word and ourr word: "
+    printstring="Information about relation between your guessed word and our word: "
     for x in range(5):
         match state[x]:
             case 0:
